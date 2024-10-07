@@ -1,5 +1,5 @@
 <body>
-    <?php include('header.php');?>
+    <?php include('./partials/header.php');?>
     <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="flex: 1;">
     <div class="card">
         <div class="card-body text-center">

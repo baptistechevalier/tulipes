@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <?php include('header.php');?>
+    <?php include('./partials/header.php');?>
     <main>
         <?php    
     
