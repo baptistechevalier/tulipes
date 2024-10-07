@@ -29,7 +29,7 @@
         if ($count == 1) {
             // Connexion rÃ©ussie
             
-            $_SESSION['login'] = $pseudo;
+            $_SESSION['login'] = $login;
             $_SESSION['roles'] = $user['roles'];
             $_SESSION['idusr'] = $user['id'];
             if ($user['idrole'] == '2') {
@@ -48,7 +48,7 @@
     <div class ="formulaire_connexion">
         <h2>Connectez-vous</h2>
         <form method="post" action="login.php">
-            <label for="login"><b>Pseudo :</b></label><br>
+            <label for="login"><b>Login :</b></label><br>
             <input type="text" id="login" name="login" class="formulaire_connexion" required><br>
 
             <label for="mdp"><b>Mot de passe :</b></label><br>
