@@ -1,4 +1,4 @@
-<?php require_once('../db_connect.php');
+<?php require_once (($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php'));
 try {
     $sql = "SELECT * FROM commandes ORDER BY id_commande";
     $stmt = $pdo->query($sql);
