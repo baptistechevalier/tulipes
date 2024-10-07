@@ -5,7 +5,6 @@
         <p>
             <a href="./prof/crud.php">Gérer les équipes</a>
         </p>
-
         <form action="./prof/addaction.php" method="post" name="add">
             <table width="25%" border="0">
                 <tr> 
@@ -24,4 +23,3 @@
     </main>
 	<?php include('../partials/footer.php') ?>
 </body>
-</html>
