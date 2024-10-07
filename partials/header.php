@@ -28,7 +28,7 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     </li>
                     <li class="nav-item"></li>
                     <?php if (isset($_SESSION['login'])){
-                        echo '<a class="nav-link" href="add.php">Nouvelles commandes</a>';
+                        echo '<a class="nav-link" href="./prof/add.php">Nouvelles commandes</a>';
                     } ?>
                     </li>
                     <li>
@@ -51,7 +51,7 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     </li>
                     <li>
                         <?php if(isset($_SESSION['roles']) && $_SESSION['roles'] =='2'){
-                             echo '<a class="nav-link" href="crud.php">Gérer les équipes</a>';
+                             echo '<a class="nav-link" href="./prof/crud.php">Gérer les équipes</a>';
                         }
                         ?>
                     </li>

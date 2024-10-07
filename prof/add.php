@@ -9,14 +9,14 @@
 
 <body>
 	<main>
-		<?php include('header.php') ?>
+		<?php include('../partials/header.php') ?>
         <main>
             <h2>Ajouter une équipe</h2>
             <p>
-                <a href="crud.php">Gérer les équipes</a>
+                <a href="./prof/crud.php">Gérer les équipes</a>
             </p>
 
-            <form action="addaction.php" method="post" name="add">
+            <form action="./prof/addaction.php" method="post" name="add">
                 <table width="25%" border="0">
                     <tr> 
                         <td>login :</td>
