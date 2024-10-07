@@ -1,22 +1,13 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter équipe</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-
 <body>
 	<main>
-		<?php include('header.php') ?>
+		<?php include('../partials/header.php') ?>
         <main>
             <h2>Ajouter une équipe</h2>
             <p>
-                <a href="crud.php">Gérer les équipes</a>
+                <a href="./prof/crud.php">Gérer les équipes</a>
             </p>
 
-            <form action="addaction.php" method="post" name="add">
+            <form action="./prof/addaction.php" method="post" name="add">
                 <table width="25%" border="0">
                     <tr> 
                         <td>login :</td>
@@ -32,7 +23,7 @@
                 </table>
             </form>
         </main>
-		<?php include('footer.php') ?>
+		<?php include('../partials/footer.php') ?>
 	</main>	
 </body>
 </html>

@@ -1,12 +1,7 @@
-<html>
-<head>
-	<title>Add Data</title>
-</head>
-
 <body>
 <?php
 // Include the database connection file
-require_once("db_connect.php");
+require_once("../db_connect.php");
 
 if (isset($_POST['submit'])) {
 	$login = $_POST['login'];
@@ -32,4 +27,3 @@ if (isset($_POST['submit'])) {
 }
 ?>
 </body>
-</html>
