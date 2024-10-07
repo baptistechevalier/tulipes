@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    <?php include('header.php');?>
-
-</html>
+    <?php include('./partials/header.php');?>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="flex: 1;">
+    <div class="card">
+        <div class="card-body text-center">
+            <h5 class="card-title">Bienvenue</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Salut l'ami !</h6>
+            <p class="card-text">Commandons des tulipes ensemble, mais d'abord connecte toi !</p>
+            <a href="login.php" class="btn btn-primary">Se connecter</a>
+        </div>
+    </div>
+</div>
+</body>
