@@ -26,15 +26,17 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Accueil <span class="sr-only"></span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="add.php">Nouvelles commandes</a>
+                    <li class="nav-item"></li>
+                    <?php if (isset($_SESSION['login'])){
+                        echo '<a class="nav-link" href="add.php">Nouvelles commandes</a>';
+                    } ?>
                     </li>
                     <li>
                     <?php
                     // Vérifie si la session contient un nom d'utilisateur
                     if(isset($_SESSION['login'])) {
                         // Si un nom d'utilisateur est présent dans la session, affiche un bouton de déconnexion
-                        echo '<a class="nav-link" href="deconnexion.php">Déconnexion</a>';
+                        echo '<a class="nav-link" href="deconnexions.php">Déconnexion</a>';
                     } else {
                         // Si aucun nom d'utilisateur n'est présent dans la session, affiche un bouton de connexion
                         echo '<a class="nav-link" href="login.php">Connexion</a>';
