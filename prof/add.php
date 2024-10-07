@@ -26,4 +26,3 @@
 		<?php include('../partials/footer.php') ?>
 	</main>	
 </body>
-</html>
