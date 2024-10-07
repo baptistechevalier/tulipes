@@ -2,7 +2,7 @@
 session_start(); 
 require_once('db_connect.php');
 
-$role = $_SESSION['idrole'] ?? '1'; // Par défault on a 'idrole' = 1 si personne est connecté
+$role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne est connecté
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +17,7 @@ $role = $_SESSION['idrole'] ?? '1'; // Par défault on a 'idrole' = 1 si personn
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.php">🎮</a>
+            <a class="navbar-brand" href="index.php">🌷</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,23 +27,23 @@ $role = $_SESSION['idrole'] ?? '1'; // Par défault on a 'idrole' = 1 si personn
                         <a class="nav-link" href="index.php">Accueil <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="liste_tournoi.php">Tournois</a>
+                        <a class="nav-link" href="add.php">Nouvelles commandes</a>
                     </li>
                     <li>
                     <?php
                     // Vérifie si la session contient un nom d'utilisateur
-                    if(isset($_SESSION['pseudo'])) {
+                    if(isset($_SESSION['login'])) {
                         // Si un nom d'utilisateur est présent dans la session, affiche un bouton de déconnexion
                         echo '<a class="nav-link" href="deconnexion.php">Déconnexion</a>';
                     } else {
                         // Si aucun nom d'utilisateur n'est présent dans la session, affiche un bouton de connexion
-                        echo '<a class="nav-link" href="connexions.php">Connexion</a>';
+                        echo '<a class="nav-link" href="login.php">Connexion</a>';
                     }
                     ?>
                     </li>                  
                     <li>
-                        <?php if(isset($_SESSION['idrole']) && $_SESSION['idrole'] == '2'){
-                            echo '<a class="nav-link" href="crudtournois.php">Gérer les tournois</a>';
+                        <?php if(isset($_SESSION['roles']) && $_SESSION['roles'] == '2'){
+                            echo '<a class="nav-link" href="liste_commandes.php">Commandes</a>';
                         } 
                         ?>
                     </li>
