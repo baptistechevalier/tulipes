@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require_once('../db_connect.php');
+require_once('db_connect.php');
 
 $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne est connecté
 ?>
@@ -10,14 +10,14 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tulipe</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.php">🌷</a>
+            <a class="navbar-brand" href="../index.php">🌷</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,7 +45,7 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     </li>                  
                     <li>
                         <?php if(isset($_SESSION['roles']) && $_SESSION['roles'] == '2'){
-                            echo '<a class="nav-link" href="liste_commandes.php">Commandes</a>';
+                            echo '<a class="nav-link" href="../prof/liste_commandes.php">Commandes</a>';
                         } 
                         ?>
                     </li>
