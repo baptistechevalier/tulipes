@@ -1,22 +1,12 @@
 <?php
-require_once("db_connect.php");
+require_once("../db_connect.php");
 
 
 $stmt = $pdo->prepare("SELECT * FROM users ORDER BY id_users ");
 $stmt->execute();
 ?>
-
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gérer les équipes</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-
 <body>
-	<?php include('./partials/header.php'); ?>
+	<?php include('../partials/header.php'); ?>
 	<main>
 		<br>
 		<div class="titre">
@@ -50,6 +40,5 @@ $stmt->execute();
 		<br>
 		<br>
 	</main>
-	<?php include('footer.php'); ?>
+	<?php include('../partials/footer.php'); ?>
 </body>
-</html>

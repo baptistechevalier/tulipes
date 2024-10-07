@@ -1,12 +1,3 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter équipe</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-
 <body>
 	<main>
 		<?php include('../partials/header.php') ?>
@@ -32,7 +23,7 @@
                 </table>
             </form>
         </main>
-		<?php include('footer.php') ?>
+		<?php include('../partials/footer.php') ?>
 	</main>	
 </body>
 </html>
