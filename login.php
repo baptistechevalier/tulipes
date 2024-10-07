@@ -47,7 +47,7 @@
     <br>
     <div class ="formulaire_connexion">
         <h2>Connectez-vous</h2>
-        <form method="post" action="connexions.php">
+        <form method="post" action="login.php">
             <label for="login"><b>Pseudo :</b></label><br>
             <input type="text" id="login" name="login" class="formulaire_connexion" required><br>
 
