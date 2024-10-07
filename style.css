@@ -120,8 +120,7 @@ body {
       text-align: center;
     }
     footer {
-      background-color: #333;
-      color: white;
+      color: rgb(0, 0, 0);
       text-align: center;
       padding: 5%;
     }
