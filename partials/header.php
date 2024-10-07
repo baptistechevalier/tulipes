@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require_once('db_connect.php');
+require_once('../db_connect.php');
 
 $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne est connecté
 ?>
