@@ -47,6 +47,12 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                         } 
                         ?>
                     </li>
+                    <li>
+                        <?php if(isset($_SESSION['roles']) && $_SESSION['roles'] =='2'){
+                             echo '<a class="nav-link" href="crud.php">Gérer les équipes</a>';
+                        }
+                        ?>
+                    </li>
                 </ul>
             </div>
         </nav>
