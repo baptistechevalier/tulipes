@@ -80,7 +80,7 @@
       border-radius:5px;
     }
     a:hover{
-      background-color:#e9ecef;
+      background-color:rgba(0, 0, 0, 0.128);
     }
 
 
@@ -204,12 +204,6 @@
 
   button.formulaire_connexion:hover{
     background-color:#5753d8;
-  }
-  .erreur_inscription{
-    justify-content: center;
-    color :white;
-    text-align:center;
-    padding-top:15%;
   }
 
   .inscriptionAction{
