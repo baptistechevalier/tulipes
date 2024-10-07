@@ -40,8 +40,8 @@ $stmt->execute();
 				echo "<td>".$res['id_users']."</td>";
             	echo "<td>".$res['login']."</td>";
             	echo "<td>".$res['mdp']."</td>";
-            	echo "<td><a href=\"edit.php?id=".$res['id']."\">Modifier</a> | 
-            	<a href=\"delete.php?id=".$res['id']."\" onClick=\"return confirm('Êtes vous sur de vouloir supprimer l'utilisateur ?')\">Supprimer</a></td>";
+            	echo "<td><a href=\"edit.php?id=".$res['id_users']."\">Modifier</a> | 
+            	<a href=\"delete.php?id=".$res['id_users']."\" onClick=\"return confirm('Êtes vous sur de vouloir supprimer l'utilisateur ?')\">Supprimer</a></td>";
         	}
 	
 			?>
