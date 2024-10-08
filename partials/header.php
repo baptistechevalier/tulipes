@@ -24,11 +24,11 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Accueil <span class="sr-only"></span></a>
+                        <a class="nav-link" href="/tulipe/index.php">Accueil <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item"></li>
                     <?php if (isset($_SESSION['login'])){
-                        echo '<a class="nav-link" href="./prof/add.php">Nouvelles commandes</a>';
+                        echo '<a class="nav-link" href="addcommande.php">Nouvelles commandes</a>';
                     } ?>
                     </li>
                     <li>

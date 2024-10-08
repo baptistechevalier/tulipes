@@ -4,211 +4,213 @@
   box-sizing: border-box;
   }
   
-/* Animation gradient background */
-body {
-margin: 0;
-height: 100vh;
-font-family: 'Arial', sans-serif;
-background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-background-size: 400% 400%;
-animation: gradientAnimation 15s ease infinite;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-
-@keyframes gradientAnimation {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
-}
-/* Card styling */
-.card {
-background-color: white;
-border-radius: 30px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-width: 300px;
-padding: 20px;
-text-align: center;
-}
-
-.card-title {
-font-size: 1.5rem;
-margin-bottom: 10px;
-}
-
-.card-subtitle {
-font-size: 1rem;
-color: grey;
-margin-bottom: 15px;
-}
-
-.card-text {
-font-size: 1rem;
-margin-bottom: 20px;
-}
-
-.card-link {
-font-size: 1rem;
-margin: 0 10px;
-color: #007bff;
-text-decoration: none;
-}
-
-.card-link:hover {
-text-decoration: underline;
-}
-
-    
-header {
-  display: flex;
-  justify-content: space-around;
-}
-    
-.titre{
-/* margin-top: 3%; */
-  text-align: center;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-radius: 10px;
-  box-shadow : 10px 5px 5px white;
-  background-color:#e9ecef;
-  color : black;
-}
-    
-table{
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-th, td{
-  padding:10px;
-  text-align:center;
-  border:1px solid #ddd;
-}
-    
-th{
-  background-color: #333;
-  color: #fff;
-}
-
-tr:nth-child(even){
-  background-color:#f9f9f9;
-}
-
-tr:hover {
-  background-color:#f1f1f1;
-}
-
-a{
-  text-decoration : none;
-  color : #007bff;
-  padding:5px 10px;
-  border-radius:5px;
-}
-a:hover{
-  background-color:rgba(0, 0, 0, 0.128);
-}
-
-.tableau_commande{
-  justify-content:center;
-  text-align: center;
-}
-
-main {
-  font-family: Arial, sans-serif;
-  font-size: 150%;
-  text-align: justify;
-  display: flex;
-  padding-left:1%;
-  padding-right : 1%;
-  justify-content: flex-end;
-  flex-direction: column
-}
-.titre{
-    /* margin-top: 3%; */
-  text-align: center;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-radius: 10px;
-  box-shadow : 10px 5px 5px white;
-  background-color:#e9ecef;
-  color : black;
-}
-.liste_commande{
-  justify-content: center;
-  text-align:center;
-  margin-top: 5%;
-  margin-left:15%;
-  margin-right: 15%;
-  border-radius: 5%;
-  color:#ddd;
-}
-.formulaire_connexion{
-  background-color:#28293d;
-  border-radius:10px;
-  padding:40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  max-width:400px;
-  width:100%;
-}
-
-
-th, td{
-  padding:10px;
-  text-align:center;
-  border:1px solid #ddd;
-}
+  body {
+    margin:0;
+    height:100vh;
+    font-family: 'Arial', sans-serif;
+    background:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size:400% 400%;
+    animation:gradientAnimation 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
-th{
-  background-color: #333;
-  color: #fff;
-}
+  @keyframes gradientAnimation{
+    0% {background-position:0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
 
-tr:nth-child(even){
-  background-color:#f9f9f9;
-}
+  .card{
+    background-color:white;
+    border-radius:30px;
+    box-shadow:0 4px 8px rgba(0 , 0, 0, 0.2);
+    width:300px;
+    padding:20px;
+    text-align : center;
+  }
 
-tr:hover {
-  background-color:#f1f1f1;
-}
+  .card-subtitle{
+    font-size: 1rem;
+    color:grey;
+    margin-bottom: 15px;
+  }
 
-a{
-  text-decoration : none;
-  color : #007bff;
-  padding:5px 10px;
-  border-radius:5px;
-}
-a:hover{
-  background-color:rgba(0, 0, 0, 0.128);
-}
+  .card-text{
+    font-size:1rem;
+    margin-bottom:20px;
+  }
 
-footer {
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 5%;
-}
+  .card-link{
+    font-size:1rem;
+    margin: 0 10px;
+    color : #007bff;
+    text-decoration:none;
+  }
 
-form{
+  .card-title{
+    font-size:1.5rem;
+    margin-bottom: 10px;;
+  }
+
+  .card-link:hover{
+    text-decoration:underline;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  main {
+    font-family: Arial, sans-serif;
+    font-size: 150%;
+    text-align: justify;
+    display: flex;
+    padding-left:1%;
+    padding-right : 1%;
+  }
+  .titre{
+    /* margin-top: 3%; */
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 10px;
+    box-shadow : 10px 5px 5px white;
+    background-color:#e9ecef;
+    color : black;
+  }
+
+  table{
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  th, td{
+    padding:10px;
+    text-align:center;
+    border:1px solid #ddd;
+  }
+  
+  th{
+    background-color: #333;
+    color: #fff;
+  }
+
+  tr:nth-child(even){
+    background-color:#f9f9f9;
+  }
+
+  tr:hover {
+    background-color:#f1f1f1;
+  }
+
+  a{
+    text-decoration : none;
+    color : #007bff;
+    padding:5px 10px;
+    border-radius:5px;
+  }
+  a:hover{
+    background-color:#36373944;
+  }
+
+
+  .presentation_tournoi{
+    margin-top:3%;
+    margin-left: 25%;
+    margin-right:25%;
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+    border-radius: 10px;
+    background-color: rgb(251, 14, 70);
+    box-shadow: 10px 5px 5px rgb(251, 14, 100);
+  }
+  .description{
+    color:#fff;
+    justify-content:center;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right:5%;
+  }
+ 
+  .Tableau_tournoi{
+    justify-content:center;
+    text-align: center;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .principale{
+  background-image: url(image.png);
+  } 
+
+  form{
   justify-content : center;
   text-align : center;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5%;
-}
+  }
+  .inscription{
+  text-align : center;
+  }
 
-.formulaire_connexion{
-  border-radius: 5%;
-  margin-left : 35%;
-  margin-right : 35%;
-  background-color: rgb(0, 0, 0);
-  color : white;
-  box-shadow: 10px 5px 5px rgba(137,135,135);
-}
+  .formulaire_connexion{
+    border-radius: 5%;
+    margin-left : 35%;
+    margin-right : 35%;
+    background-color: rgb(0, 0, 0);
+    color : white;
+    box-shadow: 10px 5px 5px rgba(137,135,135);
+  }
+
+     
+  .intro{
+    justify-content: center;
+    text-align:center;
+    margin-top: 5%;
+    margin-left:15%;
+    margin-right: 15%;
+    border-radius: 5%;
+    color:#ddd;
+  }
+  .photo{
+    justify-content : center;
+    margin-top:5%;
+    margin-left:15%;
+    margin-right:15%;
+    text-align : center;
+  }
+  img.responsive {
+    max-width: 100%;
+    height: auto;
+  }
+  .inscription{
+    border-radius:5%;
+    margin-right:15%;
+    margin-left:15%;
+    margin-top:3%;
+    color:whitesmoke;
+  }
+ .formulaire_connexion{
+  background-color:#28293d;
+  border-radius:10px;
+  padding:40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  max-width:400px;
+  width:100%;
+ }
 
 h2.formulaire_connexion{
   text-align:center;
@@ -216,7 +218,7 @@ h2.formulaire_connexion{
   color:#ffffff;
   font-size:24px;
   letter-spacing:1px;
-}
+ }
 
 input[type="text"].formulaire_connexion, input[type="password"].formulaire_connexion{
   width:100%;
