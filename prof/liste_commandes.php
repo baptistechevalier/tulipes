@@ -1,7 +1,4 @@
-
-<body>
-    <?php include('../partials/header.php');?>
-    <?php require_once (($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php'));
+<?php require_once (($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php'));
 try {
     $sql = "SELECT * FROM commandes ORDER BY id_commande";
     $stmt = $pdo->query($sql);
@@ -11,7 +8,9 @@ try {
     exit;
 }
 ?>
-
+<body>
+    <?php include('../partials/header.php');?>
+    
     <main>
         <div class="liste_commande">
             <h1><b>Liste des commandes</b></h1>

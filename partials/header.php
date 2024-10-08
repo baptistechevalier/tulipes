@@ -36,10 +36,10 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     // Vérifie si la session contient un nom d'utilisateur
                     if(isset($_SESSION['login'])) {
                         // Si un nom d'utilisateur est présent dans la session, affiche un bouton de déconnexion
-                        echo '<a class="nav-link" href="deconnexions.php">Déconnexion</a>';
+                        echo '<a class="nav-link" href="/tulipe/deconnexions.php">Déconnexion</a>';
                     } else {
                         // Si aucun nom d'utilisateur n'est présent dans la session, affiche un bouton de connexion
-                        echo '<a class="nav-link" href="login.php">Connexion</a>';
+                        echo '<a class="nav-link" href="/tulipe/login.php">Connexion</a>';
                     }
                     ?>
                     </li>                  
@@ -51,7 +51,7 @@ $role = $_SESSION['roles'] ?? '1'; // Par défault on a 'idrole' = 1 si personne
                     </li>
                     <li>
                         <?php if(isset($_SESSION['roles']) && $_SESSION['roles'] =='2'){
-                             echo '<a class="nav-link" href="./prof/crud.php">Gérer les équipes</a>';
+                             echo '<a class="nav-link" href="/tulipe/prof/crud.php">Gérer les équipes</a>';
                         }
                         ?>
                     </li>
