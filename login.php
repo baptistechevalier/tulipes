@@ -10,6 +10,8 @@
 </head>
 <body>
     <?php include('./partials/header.php');?>
+    <div class="tulipe-container"></div>
+    <script src="script.js"></script>
     <main>
         <?php    
     

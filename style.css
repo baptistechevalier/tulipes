@@ -8,7 +8,7 @@
     margin:0;
     height:100vh;
     font-family: 'Arial', sans-serif;
-    background:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background:linear-gradient(-45deg, #FF69B4, #FFFFFF);
     background-size:400% 400%;
     animation:gradientAnimation 15s ease infinite;
     display: flex;
@@ -147,7 +147,7 @@
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 5%;
+    padding-top: 10%;
   }
 
   .principale{
@@ -240,4 +240,34 @@ input[type="text"].formulaire_connexion:focus, input[type="password"].formulaire
 
 button.formulaire_connexion:hover{
   background-color:#5753d8;
+}
+.tulipe-container{
+  margin:0;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+}
+.tulipe {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('tulipe-removebg.png');
+  background-size: cover;
+  animation: moveTulipe 10s linear infinite;
+  pointer-events: none;
+}
+@keyframes moveTulipe {
+  0% {
+    transform: translateY(100vh) translateX(0);
+  }
+  25% {
+    transform: translateY(25vh) translateX(25vw);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+  }
 }

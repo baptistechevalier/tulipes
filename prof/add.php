@@ -1,5 +1,7 @@
 <body>
 	<?php include('../partials/header.php') ?>
+    <div class="tulipe-container"></div>
+    <script src="/tulipe/script.js"></script>
     <main>
         <h2>Ajouter une équipe</h2>
         <p>

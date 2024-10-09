@@ -10,7 +10,8 @@ try {
 ?>
 <body>
     <?php include('../partials/header.php');?>
-    
+    <div class="tulipe-container"></div>
+    <script src="/tulipe/script.js"></script>
     <main>
         <div class="liste_commande">
             <h1><b>Liste des commandes</b></h1>

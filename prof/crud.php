@@ -7,6 +7,8 @@ $stmt->execute();
 ?>
 <body>
 	<?php include('../partials/header.php'); ?>
+	<div class="tulipe-container"></div>
+    <script src="/tulipe/script.js"></script>
 	<main>
 		<br>
 		<div class="titre">
