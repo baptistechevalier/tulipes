@@ -32,7 +32,7 @@
         <div class="card shadow">
             <div class="card-body">
                 <h2 class="card-title text-center mb-4">Ajouter une Commande</h2>
-                <form action="/tulipe/addcommandeaction.php" method="post" name="add">
+                <form action="/tulipe/addcommandeaction.php" method="POST">
                     <div class="form-group">
                         <label for="nom">Nom et Prénom :</label>
                         <input type="text" class="form-control" id="nom" name="nom" required>
@@ -108,7 +108,7 @@
                         <input type="hidden" name="signature" id="signatureInput">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+                    <button type="submit" class="btn btn-primary btn-block">Prendre la commande</button>
                 </form>
             </div>
         </div>
