@@ -35,7 +35,12 @@
 				</tr>
 				<tr> 
 					<td>Semaine de livraison :</td>
-					<td><input type="text" name="livraison"></td>
+					<td><select id="livraison" name="livraison">
+					<option value="option">~Choisir une option~</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+		</td>
 				</tr>
 				<tr>
 					<td>Adresse de livraison :</td>
