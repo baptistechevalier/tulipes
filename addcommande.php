@@ -14,6 +14,9 @@
 	<div class="tulipe-container"></div>
     <script src="script.js"></script>
     <main>
+		<div class = "add_commande">
+			<h1>Nouvelles commandes</h1>
+		</div>
         <form action="/tulipe/addcommandeaction.php" method="post" name="add">
 		<table width="25%" border="0">
 				<tr> 

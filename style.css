@@ -330,3 +330,6 @@ button.formulaire_connexion:hover {
       text-decoration: underline;
   }
 }
+canvas{
+  border :solid black;
+}
