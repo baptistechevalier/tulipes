@@ -10,7 +10,6 @@ $stmt->execute();
 	<div class="tulipe-container"></div>
     <script src="/tulipe/script.js"></script>
 	<main>
-		<br>
 		<div class="titre">
 			<h2>Accueil</h2>
 		</div>

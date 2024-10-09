@@ -16,6 +16,7 @@ try {
         <div class="liste_commande">
             <h1><b>Liste des commandes</b></h1>
         </div>
+        <br>
         <div class = "tableau_commande">
             <table border="1">
                 <tr>
