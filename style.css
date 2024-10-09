@@ -255,7 +255,7 @@ button.formulaire_connexion:hover{
   position: absolute;
   width: 50px;
   height: 50px;
-  background-image: url('tulipe-removebg.png');
+  background-image: url('/tulipe/assets/images/tulipe-removebg.png');
   background-size: cover;
   animation: moveTulipe 10s linear infinite;
   pointer-events: none;
