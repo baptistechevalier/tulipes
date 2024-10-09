@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
         }
     } else { 
         $stmt = $pdo->prepare("INSERT INTO commandes (`nom`,`quantite`,`reglement`, `montant`, `livraison`,`signature`, `adresse_personne`, `adresse_de_livraison`, `vendupar`, `telephone`, `mail`, `civilite`) VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite)");
-        $stmt->execute([':nom' => $nom, ':quantite' => $quantite, ':montant' => $prix, ':livraison' => $livraison, ':reglement' => $reglement, ':signature' => $signature_name, ':adresse_personne' => $adresse_pers, ':adresse_de_livraison' => $adresse_liv, ':vendupar' => $vendupar, ':telephone' => $tel, ':mail' => $mail, ':civilite' => $civilite]);
+        $stmt->execute([':nom' => $nom, ':quantite' => $quantite, ':montant' => $prix, ':livraison' => $livraison, ':reglement' => $reglement, ':signature' => $signature_name, ':adresse_personne' => $adresse_pers, ':adresse_de_livraison' => $adresse_liv, ':vendupar' => $vendupar, ':telephone' => $numtel, ':mail' => $mail, ':civilite' => $civilite]);
         
        
         
