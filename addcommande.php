@@ -36,11 +36,15 @@
 				<tr> 
 					<td>Semaine de livraison :</td>
 					<td><select id="livraison" name="livraison">
-					<option value="option">~Choisir une option~</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-		</td>
+						<option value="option">~Choisir une option~</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="S1 et S2">1 et 2</option>
+						<option value = "S1 et S3">1 et 3</option>
+						<option value = "S2 et S3">2 et 3</option>
+						<option value = "S1, S2, et S3">1 ; 2 et 3</option>
+					</td>
 				</tr>
 				<tr>
 					<td>Adresse de livraison :</td>
