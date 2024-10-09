@@ -22,19 +22,33 @@ try {
                 <tr>
                     <th>Numéro de commande</th>
                     <th>Nom</th>
+                    <th>Civilité</th>
                     <th>Quantité</th>
                     <th>Prix total</th>
                     <th>Moyen de réglement</th>
                     <th>Semaine de livraison</th>
+                    <th>Adresse de la personne</th>
+                    <th>Lieu de livraison</th>
+                    <th>Vendu par</th>
+                    <th>Téléphone</th>
+                    <th>Mail</th>
+                    <th>Signature</th>
                 </tr>
                 <?php foreach ($commandes as $commande):?>
                 <tr>
                     <td><?=htmlspecialchars($commande['id_commande'])?></td>
                     <td><?=htmlspecialchars($commande['nom'])?></td>
+                    <td><?=htmlspecialchars($commande['civilite'])?></td>
                     <td><?=htmlspecialchars($commande['quantite'])?></td>
                     <td><?=htmlspecialchars($commande['montant'])?></td>
                     <td><?=htmlspecialchars($commande['reglement'])?></td>
                     <td><?=htmlspecialchars($commande['livraison'])?></td>
+                    <td><?=htmlspecialchars($commande['adresse_personne'])?></td>
+                    <td><?=htmlspecialchars($commande['adresse_de_livraison'])?></td>
+                    <td><?=htmlspecialchars($commande['vendupar'])?></td>
+                    <td><?=htmlspecialchars($commande['telephone'])?></td>
+                    <td><?=htmlspecialchars($commande['mail'])?></td>
+                    <?php echo "<td><img src='/tulipe/images/" . htmlspecialchars($commande['signature']) . "' alt='Signature' style='width:50px;height:50px;'></td>"; ?>
                 </tr>
                 <?php endforeach;?>
             </table>
