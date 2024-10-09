@@ -29,7 +29,7 @@
 						<option value="autre">Autre</option>
 					</select></td>
 				</tr>
-				<tr> 
+				<tr>
 					<td>Quantité  : </td>
 					<td><input type="int" name="quantite"></td>
 				</tr>
