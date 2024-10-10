@@ -87,7 +87,7 @@
                             <option value="">~Choisir une option~</option>
                             <option value="cheque">Chèque</option>
                             <option value="especes">Espèces</option>
-							<option value="carte_bancaire">Carte Bancaire</option>
+							<option value="carte bancaire">Carte Bancaire</option>
                         </select>
                     </div>
 

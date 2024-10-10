@@ -1,7 +1,7 @@
 <body>
     <?php
-    require_once("db_connect.php");
     include(__DIR__ . '/partials/header.php');
+    require_once("db_connect.php");
 
     // Active l'affichage des erreurs
     ini_set('display_errors', 1);
@@ -14,7 +14,7 @@
         $quantite = $_POST['quantite'];
         $livraison = $_POST['livraison'];
         $reglement = $_POST['reglement'];
-        $prix = 10 * $quantite; // Calcul du prix basé sur la quantité
+        $prix = 10 * $quantite;
         $signature_base64 = $_POST['signature'];
         $civilite = $_POST['civilite'];
         $adresse_liv = $_POST['adresse_liv'];
@@ -24,7 +24,7 @@
         $mail = $_POST['mail'];
         $remarque = $_POST['remarques'];
 
-        // Vérification des champs obligatoires
+        
         if (empty($nom) || empty($quantite) || empty($livraison) || empty($reglement)) {
             if (empty($nom)) {
                 echo "<font color='red'>Veuillez entrer le nom de la commande</font><br/>";
@@ -48,17 +48,16 @@
             $signature_name = uniqid() . '.png';
             $signature_path = 'images/' . $signature_name;
 
-            // Stocke la signature dans le dossier 'images'
+            // Stocker la signature
             if (!file_put_contents($signature_path, $signature_data)) {
                 echo "<font color='red'>Erreur lors de l'enregistrement de la signature</font><br/>";
                 exit;
             }
 
-            // Préparation de la requête SQL
             $stmt = $pdo->prepare("INSERT INTO commandes (nom, quantite, reglement, montant, livraison, signature, adresse_personne, adresse_de_livraison, vendupar, telephone, mail, civilite, remarque, id_user) 
                                 VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite, :remarque, :id_equip)");
 
-            // Exécution de la requête avec gestion d'erreur
+
             if ($stmt->execute([
                 ':nom' => $nom,
                 ':quantite' => $quantite,
