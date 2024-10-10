@@ -32,7 +32,7 @@
                             // Connexion réussie
                             $_SESSION['login'] = $login;
                             $_SESSION['roles'] = $user['roles'];
-                            $_SESSION['idusr'] = $user['id'];
+                            $_SESSION['idusr'] = $user['id_users'];
                             if ($user['idrole'] == '2') {
                                 header("location: crud.php");
                             } else {
