@@ -7,15 +7,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php');
 
 // Requête SQL pour récupérer le classement des équipes
 $sql = "SELECT u.login AS equipe, SUM(c.quantite) AS total_quantite
-        FROM users u
-        JOIN commandes c ON u.login = c.vendupar
+        FROM users AS u
+        JOIN commandes AS c ON c.id_equip = u.id_users
         WHERE u.roles = 1  -- '1' représente une équipe
         GROUP BY u.login
         ORDER BY total_quantite DESC";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
-$classement = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$classements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container mt-5">
@@ -32,11 +32,11 @@ $classement = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php 
                 $rank = 1; // Compteur de rang
-                foreach ($commande as $commande): ?>
+                foreach ($classements as $classement): ?>
                     <tr class="<?= ($rank === 1) ? 'table-success' : '' ?>"> <!-- Classe spéciale pour le premier -->
                         <th scope="row"><?= $rank ?></th>
-                        <td><?= htmlspecialchars($commande['id_equip']) ?></td>
-                        <td><?= htmlspecialchars($commande['total_quantite']) ?></td>
+                        <td><?= htmlspecialchars($classement['equipe']) ?></td>
+                        <td><?= htmlspecialchars($classement['total_quantite']) ?></td>
                     </tr>
                     <?php $rank++; ?>
                 <?php endforeach; ?>
