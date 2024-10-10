@@ -142,12 +142,11 @@ a:hover {
 
 
 footer {
-  width: 100%;
   background-color: #333;
   color: white;
   text-align: center;
+  padding: 10px;
   padding-top: 10%;
-  position: absolute;
   bottom : 0;
 }
 
@@ -255,6 +254,7 @@ button.formulaire_connexion:hover {
 
   main {
     font-size: 1.2rem;
+    flex:1;
   }
 
   table {
@@ -336,3 +336,24 @@ button.formulaire_connexion:hover {
 canvas{
   border :solid black;
 }
+
+.photo{
+  position:relative;
+  width:100%;
+  height:100px;
+}
+.image_left {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100px;
+  height:auto;
+}
+.image_right{
+  position:absolute;
+  top:0;
+  right:0;
+  width:100px;
+  height:auto;
+}
+

@@ -29,6 +29,10 @@
     <div class="tulipe-container"></div>
     <script src="script.js"></script>
     <main class="container my-5">
+		<div class="photo">
+            <img src="/tulipe/assets/images/baudimont.png" class = "image_right" alt="Image droite" heigt="auto" width="auto">
+			<img src="/tulipe/assets/images/lionsClub.png" class="image_left" alt="Image gauche" height="auto"width="auto">
+		</div>
         <div class="card shadow">
             <div class="card-body">
                 <h2 class="card-title text-center mb-4">Ajouter une Commande</h2>
@@ -118,7 +122,7 @@
             </div>
         </div>
     </main>
-    <?php include('./partials/footer.php') ?>
+    
 
     <!-- Inclusion de jQuery et Bootstrap JS pour le bon fonctionnement des composants Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXD5zBBpXk8qv3eBGTR+2SJo1OtqU3/B3+zoEux/fdHZSWuTpp17MgfiCcOtBJN" crossorigin="anonymous"></script>
@@ -202,5 +206,6 @@
             signatureInput.value = canvas.toDataURL('image/png');
         });
     </script>
+	<?php include('./partials/footer.php') ?>
 </body>
 </html>

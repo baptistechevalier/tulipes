@@ -20,21 +20,6 @@
                 </div>
             </div>
         </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </main>
     <?php include(__DIR__.'/partials/footer.php'); ?>
 </body>

@@ -11,9 +11,12 @@
     <!-- Lien vers votre fichier CSS personnalisé -->
     <link rel="stylesheet" href="../style.css">
 </head>
-<footer class="bg-dark text-white text-center py-3">
-    &copy; 2024 Cyber Games. Tous droits réservés.
-</footer>
+<body>
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2024. Tous droits réservés.
+    </footer>
+</body>
+
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

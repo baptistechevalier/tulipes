@@ -13,6 +13,7 @@ try {
     <div class="tulipe-container"></div>
     <script src="/tulipe/script.js"></script>
     <main>
+        
         <div class="liste_commande">
             <h1>Liste des commandes</h1>
         </div>
@@ -20,6 +21,7 @@ try {
         <div class = "tableau_commande">
             <table border="1">
                 <tr>
+                    <th>Numéro de l'équipe</th>
                     <th>Numéro de commande</th>
                     <th>Nom</th>
                     <th>Civilité</th>
@@ -33,9 +35,11 @@ try {
                     <th>Téléphone</th>
                     <th>Mail</th>
                     <th>Signature</th>
+                    <th>Remarques</th>
                 </tr>
                 <?php foreach ($commandes as $commande):?>
                 <tr>
+                    <td><?=htmlspecialchars($commande['id_user'])?></td>
                     <td><?=htmlspecialchars($commande['id_commande'])?></td>
                     <td><?=htmlspecialchars($commande['nom'])?></td>
                     <td><?=htmlspecialchars($commande['civilite'])?></td>
@@ -49,6 +53,7 @@ try {
                     <td><?=htmlspecialchars($commande['telephone'])?></td>
                     <td><?=htmlspecialchars($commande['mail'])?></td>
                     <?php echo "<td><img src='/tulipe/images/" . htmlspecialchars($commande['signature']) . "' alt='Signature' style='width:50px;height:50px;'></td>"; ?>
+                    <td><?=htmlspecialchars($commande['remarque'])?></td>
                 </tr>
                 <?php endforeach;?>
             </table>
