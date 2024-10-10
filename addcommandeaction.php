@@ -7,9 +7,7 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-
     $id_equip = $_SESSION['idusr'];
-    echo $id_equip;
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nom = $_POST['nom'];
