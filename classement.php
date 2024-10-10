@@ -1,6 +1,6 @@
 <?php 
 // Inclure la connexion à la base de données
-include_once ($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php');
 ?>
 <!-- // Inclure le header -->
 <?php include(__DIR__ . '/partials/header.php'); 
@@ -32,11 +32,11 @@ $classement = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php 
                 $rank = 1; // Compteur de rang
-                foreach ($classement as $row): ?>
+                foreach ($commande as $commande): ?>
                     <tr class="<?= ($rank === 1) ? 'table-success' : '' ?>"> <!-- Classe spéciale pour le premier -->
                         <th scope="row"><?= $rank ?></th>
-                        <td><?= htmlspecialchars($row['equipe']) ?></td>
-                        <td><?= htmlspecialchars($row['total_quantite']) ?></td>
+                        <td><?= htmlspecialchars($commande['id_equip']) ?></td>
+                        <td><?= htmlspecialchars($commande['total_quantite']) ?></td>
                     </tr>
                     <?php $rank++; ?>
                 <?php endforeach; ?>
@@ -47,5 +47,5 @@ $classement = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- Inclure le footer -->
 <?php 
-include_once ($_SERVER['DOCUMENT_ROOT'] . '/tulipe/partials/footer.php');
+include(__DIR__ . '/partials/footer.php');
 ?>
