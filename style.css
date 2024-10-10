@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   font-family: 'Arial', sans-serif;
   background: linear-gradient(-45deg, #FF69B4, #FFFFFF);
   background-size: 400% 400%;
@@ -119,14 +119,14 @@ a:hover {
 }
 
 .liste_commande {
-  margin-top: 3%;
+  /* margin-top: 3%; */
   margin: auto;
   width: 60%;
   text-align: center;
-  color: #fff;
+  color: black;
   border-radius: 10px;
-  background-color: rgb(251, 14, 70);
-  box-shadow: 10px 5px 5px rgb(251, 14, 100);
+  background-color: rgb(247, 163, 182);
+  box-shadow: 10px 5px 5px rgb(255, 132, 177);
   display: flex;
   justify-content: center;
 }

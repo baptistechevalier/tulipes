@@ -14,7 +14,7 @@ try {
     <script src="/tulipe/script.js"></script>
     <main>
         <div class="liste_commande">
-            <h1><b>Liste des commandes</b></h1>
+            <h1>Liste des commandes</h1>
         </div>
         <br>
         <div class = "tableau_commande">
