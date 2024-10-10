@@ -142,10 +142,13 @@ a:hover {
 
 
 footer {
+  width: 100%;
   background-color: #333;
   color: white;
   text-align: center;
   padding-top: 10%;
+  position: absolute;
+  bottom : 0;
 }
 
 form {
