@@ -83,6 +83,7 @@
                             <option value="">~Choisir une option~</option>
                             <option value="cheque">Chèque</option>
                             <option value="especes">Espèces</option>
+							<option value="carte_bancaire">Carte Bancaire</option>
                         </select>
                     </div>
 
@@ -107,6 +108,10 @@
                         <button type="button" class="btn btn-secondary btn-clear" onclick="clearSignature()">Effacer</button>
                         <input type="hidden" name="signature" id="signatureInput">
                     </div>
+					<div class="form-group">
+						<label for="remarques">Remarques :</label>
+						<input type="text" name="remarques" id="remarques" height="auto" width="auto">
+					</div>
 
                     <button type="submit" class="btn btn-primary btn-block">Prendre la commande</button>
                 </form>
