@@ -58,6 +58,15 @@ try {
                 <?php endforeach;?>
             </table>
         </div>
+        <?php $sql = "SELECT SUM(montant) AS montant FROM commandes";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $total = $result['montant'];?>
+        <br>
+        <div class="total">
+            <p>Le chiffre d'affaire total de tulipe vendu est de <?php echo $total ;?>.</p>
+        </div>
     </main>
     <?php include('../partials/footer.php');?>
 </body>

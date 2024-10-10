@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <footer class="bg-dark text-white text-center py-3">
-    &copy; 2024 Cyber Games. Tous droits réservés.
+    &copy; 2024 TULIPES. Tous droits réservés.
 </footer>
 
 <!-- Bootstrap JS -->
