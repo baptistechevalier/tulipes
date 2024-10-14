@@ -3,7 +3,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php');
 ?>
 <!-- // Inclure le header -->
-<?php include(__DIR__ . '/partials/header.php'); 
+<?php include('/partials/header.php'); 
 
 // Requête SQL pour récupérer le classement des équipes
 $sql = "SELECT u.login AS equipe, SUM(c.quantite) AS total_quantite
@@ -47,5 +47,5 @@ $classements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- Inclure le footer -->
 <?php 
-include(__DIR__ . '/partials/footer.php');
+include ('/tulipe/partials/footer.php');
 ?>
