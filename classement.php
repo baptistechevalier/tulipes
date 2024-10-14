@@ -14,7 +14,7 @@ $sql = "SELECT u.login AS equipe, SUM(c.quantite) AS total_quantite
         ORDER BY total_quantite DESC";
 
 $stmt = $pdo->prepare($sql);
-$stmt->execute();
+$stmt->execute(); 
 $classements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
