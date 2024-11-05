@@ -1,5 +1,5 @@
 <?php
-$db="tulipe";
+$db="tulipes";
 $dbhost="localhost";
 $dbport=3306;
 $dbuser="root";

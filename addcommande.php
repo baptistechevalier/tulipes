@@ -90,6 +90,10 @@
 							<option value="carte bancaire">Carte Bancaire</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="numero_cheque">Numéro de chèque (Si paiment par chèque)</label>
+                        <input type="text" class="form-control" id="numero_cheque" name="numero_cheque">
+                    </div>
 
                     <div class="form-group">
                         <label for="vendupar">Commande prise en charge par :</label>

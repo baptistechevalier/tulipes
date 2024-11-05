@@ -23,6 +23,7 @@
         $numtel = $_POST['num'];
         $mail = $_POST['mail'];
         $remarque = $_POST['remarques'];
+        $numero_cheque = $_POST['numero_cheque'];
 
         
         if (empty($nom) || empty($quantite) || empty($livraison) || empty($reglement)) {
@@ -54,8 +55,8 @@
                 exit;
             }
 
-            $stmt = $pdo->prepare("INSERT INTO commandes (nom, quantite, reglement, montant, livraison, signature, adresse_personne, adresse_de_livraison, vendupar, telephone, mail, civilite, remarque, id_user) 
-                                VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite, :remarque, :id_equip)");
+            $stmt = $pdo->prepare("INSERT INTO commandes (nom, quantite, reglement, montant, livraison, signature, adresse_personne, adresse_de_livraison, vendupar, telephone, mail, civilite, remarque, id_user, numero_cheques) 
+                                VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite, :remarque, :id_equip, :numero_cheque)");
 
 
             if ($stmt->execute([
@@ -73,6 +74,7 @@
                 ':civilite' => $civilite,
                 ':remarque' => $remarque,
                 ':id_equip' => $id_equip,
+                ':numero_cheque' => $numero_cheque,
             ])) {
                 echo "<p><font color='green'>Commande ajoutée avec succès!</font></p>";
             } else {

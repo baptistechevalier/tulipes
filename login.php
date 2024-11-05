@@ -34,7 +34,7 @@
                             $_SESSION['roles'] = $user['roles'];
                             $_SESSION['idusr'] = $user['id_users'];
                             if ($user['roles'] == '2') {
-                                header("location: crud.php");
+                                header("location: tulipe\prof\crud.php");
                             } else {
                                 echo "<p>Connexion réussie !</p>";
                                 header("Location: index.php");
