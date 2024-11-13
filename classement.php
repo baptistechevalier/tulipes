@@ -3,12 +3,13 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/tulipe/db_connect.php');
 ?>
 <!-- // Inclure le header -->
+ <body>
 <?php include('/partials/header.php'); 
 
 // Requête SQL pour récupérer le classement des équipes
 $sql = "SELECT u.login AS equipe, SUM(c.quantite) AS total_quantite
         FROM users AS u
-        JOIN commandes AS c ON c.id_equip = u.id_users
+        JOIN commandes AS c ON c.id_user = u.id_users
         WHERE u.roles = 1  -- '1' représente une équipe
         GROUP BY u.login
         ORDER BY total_quantite DESC";
@@ -49,3 +50,4 @@ $classements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php 
 include ('/tulipe/partials/footer.php');
 ?>
+</body>

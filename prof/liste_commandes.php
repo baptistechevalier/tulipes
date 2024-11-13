@@ -28,6 +28,7 @@ try {
                     <th>Quantité</th>
                     <th>Prix total</th>
                     <th>Moyen de réglement</th>
+                    <th>Numéro de chèque</th>
                     <th>Semaine de livraison</th>
                     <th>Adresse de la personne</th>
                     <th>Lieu de livraison</th>
@@ -46,6 +47,7 @@ try {
                     <td><?=htmlspecialchars($commande['quantite'])?></td>
                     <td><?=htmlspecialchars($commande['montant'])?></td>
                     <td><?=htmlspecialchars($commande['reglement'])?></td>
+                    <td><?=htmlspecialchars($commande['numero_cheques'])?></td>
                     <td><?=htmlspecialchars($commande['livraison'])?></td>
                     <td><?=htmlspecialchars($commande['adresse_personne'])?></td>
                     <td><?=htmlspecialchars($commande['adresse_de_livraison'])?></td>

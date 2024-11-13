@@ -55,11 +55,17 @@
                 exit;
             }
 
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            try {
+    // Préparation de la requête SQL
             $stmt = $pdo->prepare("INSERT INTO commandes (nom, quantite, reglement, montant, livraison, signature, adresse_personne, adresse_de_livraison, vendupar, telephone, mail, civilite, remarque, id_user, numero_cheques) 
-                                VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite, :remarque, :id_equip, :numero_cheque)");
+            VALUES (:nom, :quantite, :reglement, :montant, :livraison, :signature, :adresse_personne, :adresse_de_livraison, :vendupar, :telephone, :mail, :civilite, :remarque, :id_equip, :numero_cheque)");
 
 
-            if ($stmt->execute([
+
+    // Exécution de la requête avec les paramètres
+            $executeResult = $stmt->execute([
                 ':nom' => $nom,
                 ':quantite' => $quantite,
                 ':montant' => $prix,
@@ -74,15 +80,29 @@
                 ':civilite' => $civilite,
                 ':remarque' => $remarque,
                 ':id_equip' => $id_equip,
-                ':numero_cheque' => $numero_cheque,
-            ])) {
-                echo "<p><font color='green'>Commande ajoutée avec succès!</font></p>";
+                ':numero_cheque' => !empty($numero_cheque) ? $numero_cheque : null
+            ]);
+
+   
+            if ($executeResult) {
+                echo "Données insérées avec succès.";
+                ?>
+                <script>
+                    setTimeout(function() {
+                        window.location.href = 'index.php';
+                    }, 5000);
+                </script>
+                <?php
             } else {
-                echo "<p><font color='red'>Erreur lors de l'ajout de la commande.</font></p>";
-                print_r($stmt->errorInfo()); // Affiche les détails de l'erreur SQL
+                $errorInfo = $stmt->errorInfo();
+                throw new Exception("Erreur lors de l'insertion : " . $errorInfo[2]);
             }
+        } catch (Exception $e) {
+            echo "Une erreur est survenue : " . $e->getMessage();
         }
     }
-    ?>
+    }
+    
+?>
 
 </body>
