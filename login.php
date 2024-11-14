@@ -60,8 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="tulipe-container"></div>
-    <script src="script.js"></script>
+    <div class="tulipe-container"><script src="script.js"></script></div>
     <?php include ('./partials/footer.php') ?>
 </body>
 </html>

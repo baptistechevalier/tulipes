@@ -26,8 +26,6 @@
 </head>
 <body>
     <?php include(__DIR__ . '/partials/header.php'); ?>
-    <div class="tulipe-container"></div>
-    <script src="script.js"></script>
     <main class="container my-5">
 		<div class="photo">
             <img src="/tulipe/assets/images/baudimont.png" class = "image_right" alt="Image droite" heigt="auto" width="auto">
@@ -211,5 +209,7 @@
         });
     </script>
 	<?php include('./partials/footer.php') ?>
+    <div class="tulipe-container"><script src="script.js"></script></div>
+    
 </body>
 </html>
